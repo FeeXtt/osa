@@ -1,7 +1,12 @@
 * {
   user-select: none;
   font-family: sans-serif;
-  background-color: black;
+ 
+  overflow: hidden;
+}
+body{
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(8,7,103,1) 43%, rgba(9,9,121,1) 56%, rgba(0,212,255,1) 82%);
 }
 
 #start {
@@ -12,7 +17,8 @@
   border-radius: 40px;
   border: 4px solid rgb(70, 151, 88);
   font-size: 50px;
-  margin-left: 35%;
+  
+  
 }
 
 #tlacitko {
@@ -23,11 +29,17 @@
   border: 5px solid rgb(57, 52, 191);
   cursor: pointer;
   position: absolute;
-  
   left: 0;
   right: 0;
-  margin: 0 auto;
-  transition: 0.3s ease;
+ 
+  transition: 3s ease;
+  color: white;
+  font-size: 40px;
+  text-align: center;
 }
-
+#timeInfo{
+  text-align: center;
+  font-size: 30px;
+  color: red;
+}
 
