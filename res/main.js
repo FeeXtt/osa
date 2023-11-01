@@ -2,11 +2,13 @@ const point = document.getElementById("tlacitko");
 const startButton = document.getElementById("start");
 const timeInfo = document.getElementById("timeInfo");
 let gameInterval;
+let sui = new Audio('./res/suiii.mp3');
 
 startButton.onclick = () => {
   hideElement(startButton);
   startGameInterval(point);
   setPointClick(point);
+  
   timeStart = performance.now();
 };
 const movePoint = (element, x, y) => {
@@ -34,6 +36,7 @@ const getRandomNumber = (minimum, maximum) =>
 const setPointClick = (element) => {
   element.onclick = () => {
     element.innerText++;
+    sui.play()
     movePoint(
       element,
       getRandomNumber(50, window.innerWidth - parseInt(element.style.width)),
